@@ -1,0 +1,181 @@
+@import "../node_modules/react-alice-carousel/lib/scss/alice-carousel.scss";
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
+
+.mg-container {
+  background-color: grey;
+  text-align: center;
+  border-radius: 25px;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: "Permanent Marker", cursive;
+  .mg-text-inputs {
+    text-align: center;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    .mg-text-input {
+      display: inline-block;
+      p {
+        margin: 0;
+      }
+      textarea {
+        width: 194px;
+      }
+    }
+  }
+  .mg-meme-container {
+    background-color: green;
+    max-width: 400px;
+    margin: 10px auto 30px auto;
+    text-align: center;
+    .mg-meme {
+      position: relative;
+      max-width: 400px;
+      height: 400px;
+      background-color: black;
+      .alice-carousel {
+        height: 400px;
+        div .alice-carousel__wrapper {
+          height: 400px;
+        }
+        .alice-carousel__dots {
+          margin-top: 0;
+          .alice-carousel__dots-item.__active {
+            background-color: black;
+          }
+          .alice-carousel__dots-item:hover {
+            background-color: black;
+          }
+        }
+        .alice-carousel__prev-btn {
+          padding: 0;
+          height: 0;
+          width: 0;
+          text-align: left;
+          position: absolute;
+          margin-top: -45px;
+          margin-left: -100px;
+          p {
+            color: black;
+          }
+        }
+        .alice-carousel__next-btn {
+          padding: 0;
+          height: 0;
+          width: 0;
+          text-align: left;
+          position: absolute;
+          margin-top: -45px;
+          margin-left: 70px;
+          p {
+            color: black;
+          }
+        }
+      }
+      img {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      %mg-text {
+        position: absolute;
+        width: 100%;
+        margin: 2px 0;
+        font: 32px Impact;
+        color: white;
+        -webkit-text-stroke: 1px black;
+        text-align: center;
+      }
+
+      .mg-top {
+        @extend %mg-text;
+        top: 0;
+      }
+
+      .mg-bottom {
+        @extend %mg-text;
+        bottom: 0;
+      }
+    }
+  }
+  .mg-buttons-container {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+
+    .mg-input-file::before {
+      content: "Choose File";
+      -webkit-user-select: none;
+    }
+    .mg-input-file::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+    .mg-button {
+      &.mg-input-file {
+        width: 87px;
+        height: 18px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 5px;
+      }
+      margin: 5px;
+      -moz-box-shadow: inset 0px 1px 3px 0px #91b8b3;
+      -webkit-box-shadow: inset 0px 1px 3px 0px #91b8b3;
+      box-shadow: inset 0px 1px 3px 0px #91b8b3;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.05, #768d87),
+        color-stop(1, #141717)
+      );
+      background: -moz-linear-gradient(top, #768d87 5%, #141717 100%);
+      background: -webkit-linear-gradient(top, #768d87 5%, #141717 100%);
+      background: -o-linear-gradient(top, #768d87 5%, #141717 100%);
+      background: -ms-linear-gradient(top, #768d87 5%, #141717 100%);
+      background: linear-gradient(to bottom, #768d87 5%, #141717 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#141717',GradientType=0);
+      background-color: #768d87;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+      border: 1px solid #566963;
+      display: inline-block;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: Arial;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 7px 21px;
+      text-decoration: none;
+      text-shadow: 0px -1px 0px #2b665e;
+    }
+    .mg-button:hover {
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.05, #141717),
+        color-stop(1, #768d87)
+      );
+      background: -moz-linear-gradient(top, #141717 5%, #768d87 100%);
+      background: -webkit-linear-gradient(top, #141717 5%, #768d87 100%);
+      background: -o-linear-gradient(top, #141717 5%, #768d87 100%);
+      background: -ms-linear-gradient(top, #141717 5%, #768d87 100%);
+      background: linear-gradient(to bottom, #141717 5%, #768d87 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#141717', endColorstr='#768d87',GradientType=0);
+      background-color: #141717;
+    }
+    .mg-button:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+}
