@@ -1,8 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Meme Generator
+
+To start project:<br>
+`npm install`<br>
+`npm start`<br>
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+Installs all required packages for project.
 
 ### `npm start`
 
